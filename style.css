@@ -1,0 +1,128 @@
+/*  Root variables */
+
+:root {
+  --clr-primary: #f7f4f4;
+  --clr-accent: #035c0f;
+}
+
+/*  Resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  background: var(--clr-primary);
+}
+
+.container {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 50%;
+  margin: auto;
+}
+
+/*  Header */
+
+.header {
+  background: var(--clr-accent);
+  color: var(--clr-primary);
+  padding: 2.5em 2em;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 0.5em 0 1em;
+}
+
+.search-input {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 5px;
+  color: var(--clr-primary);
+  font-size: 1em;
+  padding: 0.8em;
+  width: 100%;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--clr-primary);
+}
+
+/*  User List */
+
+.user-list {
+  background: var(--clr-primary);
+  max-height: 25em;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  padding: 1.25em;
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.user-list li.hide {
+  display: none;
+}
+
+.user-list img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 4em;
+  height: 4em;
+}
+
+.user-info {
+  margin-left: 0.7em;
+}
+
+.user-info p {
+  font-size: 0.8em;
+}
+
+footer {
+  margin: 1em 0 1em;
+  color: var(--clr-accent);
+  font-weight: 700;
+  text-transform: uppercase;
+}
